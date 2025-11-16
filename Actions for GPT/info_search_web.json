@@ -1,0 +1,16 @@
+{
+  "name": "info_search_web",
+  "description": "Search the web via the configured Bing API endpoint.",
+  "method": "POST",
+  "endpoint": "/api/info/search_web",
+  "parameters": {
+    "query": {
+      "type": "string",
+      "description": "Search phrase."
+    }
+  },
+  "required_parameters": [
+    "query"
+  ],
+  "returns": "success flag and data.results list of title, link, and snippet objects."
+}

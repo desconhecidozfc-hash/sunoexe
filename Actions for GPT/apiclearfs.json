@@ -1,0 +1,9 @@
+{
+  "name": "apiclearfs",
+  "description": "Testing helper that wipes the sandbox filesystem.",
+  "method": "POST",
+  "endpoint": "/apiclearfs",
+  "parameters": {},
+  "required_parameters": [],
+  "returns": "success flag after the sandbox root is emptied."
+}

@@ -1,0 +1,16 @@
+{
+  "name": "file_find_by_name",
+  "description": "List sandbox files matching a glob pattern.",
+  "method": "POST",
+  "endpoint": "/apifilefind_by_name",
+  "parameters": {
+    "pattern": {
+      "type": "string",
+      "description": "Glob pattern relative to the sandbox root."
+    }
+  },
+  "required_parameters": [
+    "pattern"
+  ],
+  "returns": "success flag and data.files array of matching relative paths."
+}
