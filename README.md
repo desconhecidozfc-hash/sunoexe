@@ -19,7 +19,7 @@ sudo chown -R "$USER":"$USER" /srv/action-runtime
 ## Clone the Repository
 ```bash
 cd /srv/action-runtime/app
-git clone https://github.com/desconhecidozfc-hash/sunoexe
+
 ```
 
 ## Python Environment
@@ -73,7 +73,6 @@ cd srvaction-runtime
 source .venv/bin/activate
 pip install -r ../requirements.txt
 ```
-
 ## Health Check
 ```bash
 curl http://127.0.0.1:8000/health
