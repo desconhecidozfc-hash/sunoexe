@@ -1,0 +1,16 @@
+{
+  "name": "deploy_expose_port",
+  "description": "Publish a local HTTP port through cloudflared and return the tunnel URL.",
+  "method": "POST",
+  "endpoint": "/api/deploy/expose_port",
+  "parameters": {
+    "port": {
+      "type": "integer",
+      "description": "Local TCP port to expose."
+    }
+  },
+  "required_parameters": [
+    "port"
+  ],
+  "returns": "success flag and data.url containing the public tunnel."
+}

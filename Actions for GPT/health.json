@@ -1,0 +1,9 @@
+{
+  "name": "health",
+  "description": "Check if the runtime API is reachable.",
+  "method": "GET",
+  "endpoint": "/health",
+  "parameters": {},
+  "required_parameters": [],
+  "returns": "success flag and data.status set to 'ok'."
+}

@@ -1,0 +1,25 @@
+{
+  "name": "file_str_replace",
+  "description": "Replace all occurrences of a substring in a sandboxed file.",
+  "method": "POST",
+  "endpoint": "/apifilestr_replace",
+  "parameters": {
+    "file": {
+      "type": "string",
+      "description": "Target file path relative to the sandbox."
+    },
+    "search": {
+      "type": "string",
+      "description": "Substring to replace."
+    },
+    "replace": {
+      "type": "string",
+      "description": "Replacement text."
+    }
+  },
+  "required_parameters": [
+    "file",
+    "search"
+  ],
+  "returns": "success flag and data.replacements with the number of substitutions performed."
+}

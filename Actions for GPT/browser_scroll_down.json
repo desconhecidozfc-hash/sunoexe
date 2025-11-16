@@ -1,0 +1,14 @@
+{
+  "name": "browser_scroll_down",
+  "description": "Scroll the page downward by a specific amount.",
+  "method": "POST",
+  "endpoint": "/api/browser/scroll/down",
+  "parameters": {
+    "amount": {
+      "type": "integer",
+      "description": "Pixels to scroll (1-10000)."
+    }
+  },
+  "required_parameters": [],
+  "returns": "success flag once scrolling completes."
+}

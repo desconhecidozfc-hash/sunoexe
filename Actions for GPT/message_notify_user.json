@@ -1,0 +1,16 @@
+{
+  "name": "message_notify_user",
+  "description": "Record a notification message for the user.",
+  "method": "POST",
+  "endpoint": "/api/message/notify",
+  "parameters": {
+    "message": {
+      "type": "string",
+      "description": "Notification text."
+    }
+  },
+  "required_parameters": [
+    "message"
+  ],
+  "returns": "success flag and data.delivered boolean echoing the message."
+}
