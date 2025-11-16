@@ -1,0 +1,25 @@
+{
+  "name": "file_find_in_content",
+  "description": "Run a regex against a sandboxed file with a timeout.",
+  "method": "POST",
+  "endpoint": "/apifilefind_in_content",
+  "parameters": {
+    "file": {
+      "type": "string",
+      "description": "Target file path relative to the sandbox."
+    },
+    "pattern": {
+      "type": "string",
+      "description": "Regular expression."
+    },
+    "flags": {
+      "type": "array",
+      "description": "Optional list of flags such as IGNORECASE, MULTILINE, DOTALL."
+    }
+  },
+  "required_parameters": [
+    "file",
+    "pattern"
+  ],
+  "returns": "success flag and data.matches list with match text, offsets, and line numbers."
+}

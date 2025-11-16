@@ -1,0 +1,16 @@
+{
+  "name": "browser_navigate",
+  "description": "Open a URL in the persistent browser session and return the DOM snapshot.",
+  "method": "POST",
+  "endpoint": "/api/browser/navigate",
+  "parameters": {
+    "url": {
+      "type": "string",
+      "description": "HTTP or HTTPS URL to load."
+    }
+  },
+  "required_parameters": [
+    "url"
+  ],
+  "returns": "success flag and data object with url, title, and indexed elements."
+}

@@ -1,0 +1,9 @@
+{
+  "name": "browser_restart",
+  "description": "Reset the browser session and clear the DOM cache.",
+  "method": "POST",
+  "endpoint": "/api/browser/restart",
+  "parameters": {},
+  "required_parameters": [],
+  "returns": "success flag after restarting the browser context."
+}
