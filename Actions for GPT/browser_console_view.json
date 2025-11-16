@@ -1,0 +1,14 @@
+{
+  "name": "browser_console_view",
+  "description": "Fetch recent console log entries from the browser session.",
+  "method": "POST",
+  "endpoint": "/api/browser/console/view",
+  "parameters": {
+    "limit": {
+      "type": "integer",
+      "description": "Maximum number of log entries to return (1-500)."
+    }
+  },
+  "required_parameters": [],
+  "returns": "success flag and data.console array of log messages."
+}

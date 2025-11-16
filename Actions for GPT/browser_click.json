@@ -1,0 +1,16 @@
+{
+  "name": "browser_click",
+  "description": "Click an indexed DOM element in the active page.",
+  "method": "POST",
+  "endpoint": "/api/browser/click",
+  "parameters": {
+    "index": {
+      "type": "integer",
+      "description": "Element index from the DOM snapshot."
+    }
+  },
+  "required_parameters": [
+    "index"
+  ],
+  "returns": "success flag when the click is dispatched."
+}

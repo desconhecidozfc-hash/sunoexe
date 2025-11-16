@@ -1,0 +1,16 @@
+{
+  "name": "browser_press_key",
+  "description": "Send a keyboard press to the active page.",
+  "method": "POST",
+  "endpoint": "/api/browser/press_key",
+  "parameters": {
+    "key": {
+      "type": "string",
+      "description": "Key identifier accepted by Puppeteer (e.g., Enter)."
+    }
+  },
+  "required_parameters": [
+    "key"
+  ],
+  "returns": "success flag after the key press is issued."
+}

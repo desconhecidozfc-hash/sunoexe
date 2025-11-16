@@ -1,0 +1,20 @@
+{
+  "name": "make_manus_page",
+  "description": "Convert an MDX file to static HTML inside /srv/action-runtime/manus-pages.",
+  "method": "POST",
+  "endpoint": "/api/make_manus_page",
+  "parameters": {
+    "mdx_file": {
+      "type": "string",
+      "description": "MDX file path relative to the sandbox."
+    },
+    "title": {
+      "type": "string",
+      "description": "Optional HTML title override."
+    }
+  },
+  "required_parameters": [
+    "mdx_file"
+  ],
+  "returns": "success flag and data.page path to the generated HTML file."
+}

@@ -1,0 +1,9 @@
+{
+  "name": "browser_view",
+  "description": "Get the current page metadata, element index, and recent console logs.",
+  "method": "POST",
+  "endpoint": "/api/browser/view",
+  "parameters": {},
+  "required_parameters": [],
+  "returns": "success flag and data.view plus data.console arrays."
+}

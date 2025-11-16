@@ -1,0 +1,16 @@
+{
+  "name": "shell_view",
+  "description": "Read the combined stdout/stderr tail for a session.",
+  "method": "POST",
+  "endpoint": "/api/shell/view",
+  "parameters": {
+    "id": {
+      "type": "string",
+      "description": "Session identifier to inspect."
+    }
+  },
+  "required_parameters": [
+    "id"
+  ],
+  "returns": "success flag with data.output and data.running state."
+}

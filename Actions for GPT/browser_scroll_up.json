@@ -1,0 +1,14 @@
+{
+  "name": "browser_scroll_up",
+  "description": "Scroll the page upward by a specific amount.",
+  "method": "POST",
+  "endpoint": "/api/browser/scroll/up",
+  "parameters": {
+    "amount": {
+      "type": "integer",
+      "description": "Pixels to scroll (1-10000)."
+    }
+  },
+  "required_parameters": [],
+  "returns": "success flag once scrolling completes."
+}

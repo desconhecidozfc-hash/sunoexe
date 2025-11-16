@@ -1,0 +1,26 @@
+{
+  "name": "shell_exec",
+  "description": "Start a sandboxed shell session in a validated directory.",
+  "method": "POST",
+  "endpoint": "/api/shell/exec",
+  "parameters": {
+    "id": {
+      "type": "string",
+      "description": "Session identifier."
+    },
+    "exec_dir": {
+      "type": "string",
+      "description": "Working directory relative to the sandbox root."
+    },
+    "command": {
+      "type": "string",
+      "description": "Shell command to run under /bin/bash."
+    }
+  },
+  "required_parameters": [
+    "id",
+    "exec_dir",
+    "command"
+  ],
+  "returns": "success flag and data.pid plus the echoed session id."
+}

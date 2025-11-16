@@ -1,0 +1,21 @@
+{
+  "name": "browser_move_mouse",
+  "description": "Move the mouse to absolute page coordinates.",
+  "method": "POST",
+  "endpoint": "/api/browser/move_mouse",
+  "parameters": {
+    "x": {
+      "type": "number",
+      "description": "Horizontal coordinate."
+    },
+    "y": {
+      "type": "number",
+      "description": "Vertical coordinate."
+    }
+  },
+  "required_parameters": [
+    "x",
+    "y"
+  ],
+  "returns": "success flag once the pointer is moved."
+}

@@ -1,0 +1,33 @@
+{
+  "name": "file_write",
+  "description": "Write or append UTF-8 text to a sandboxed file.",
+  "method": "POST",
+  "endpoint": "/apifilewrite",
+  "parameters": {
+    "file": {
+      "type": "string",
+      "description": "Path relative to the sandbox root."
+    },
+    "content": {
+      "type": "string",
+      "description": "Text to write."
+    },
+    "append": {
+      "type": "boolean",
+      "description": "Append instead of overwrite."
+    },
+    "leading_newline": {
+      "type": "boolean",
+      "description": "Prepend a newline before content."
+    },
+    "trailing_newline": {
+      "type": "boolean",
+      "description": "Append a newline after content."
+    }
+  },
+  "required_parameters": [
+    "file",
+    "content"
+  ],
+  "returns": "success flag and data.bytes_written indicating UTF-8 bytes saved."
+}

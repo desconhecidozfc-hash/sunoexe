@@ -1,0 +1,21 @@
+{
+  "name": "browser_select_option",
+  "description": "Select an option value from a dropdown element.",
+  "method": "POST",
+  "endpoint": "/api/browser/select_option",
+  "parameters": {
+    "index": {
+      "type": "integer",
+      "description": "Element index from the DOM snapshot."
+    },
+    "value": {
+      "type": "string",
+      "description": "Option value attribute to select."
+    }
+  },
+  "required_parameters": [
+    "index",
+    "value"
+  ],
+  "returns": "success flag after the selection call completes."
+}

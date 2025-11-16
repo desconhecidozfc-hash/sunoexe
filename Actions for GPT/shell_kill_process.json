@@ -1,0 +1,16 @@
+{
+  "name": "shell_kill_process",
+  "description": "Terminate a running shell session and remove its logs.",
+  "method": "POST",
+  "endpoint": "/api/shell/kill",
+  "parameters": {
+    "id": {
+      "type": "string",
+      "description": "Session identifier."
+    }
+  },
+  "required_parameters": [
+    "id"
+  ],
+  "returns": "success flag after the process is stopped."
+}
