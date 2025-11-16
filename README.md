@@ -39,6 +39,31 @@ git clone https://github.com/<your-org>/<your-repo>.git /srv/action-runtime/app-
 ```
 You can now work from `/srv/action-runtime/app-second` while keeping the original checkout intact.
 
+### Still seeing branch errors?
+When `git clone` or `git pull` reports branch conflicts (for example, "branch already exists" or "cannot fast-forward"), stabilize the existing checkout before trying again.
+```bash
+cd /srv/action-runtime/app
+git status
+git branch -a
+git switch main
+git fetch origin
+git reset --hard origin/main
+```
+If the folder is too corrupted to fix, keep it as a backup and clone a clean copy into a new directory:
+```bash
+mv /srv/action-runtime/app /srv/action-runtime/app-backup-$(date +%Y%m%d-%H%M)
+mkdir -p /srv/action-runtime/app
+git clone https://github.com/<your-org>/<your-repo>.git /srv/action-runtime/app
+```
+Reactivate the virtual environment afterward and reinstall the requirements.
+```bash
+cd /srv/action-runtime/app/srvaction-runtime
+python3 -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+pip install -r ../requirements.txt
+```
+
 ## Python Environment
 ```bash
 cd /srv/action-runtime/app/srvaction-runtime
