@@ -1,62 +1,59 @@
-# Action Runtime Server
+# Action Runtime Server Installation
 
-## Overview
-Action Runtime Server is a FastAPI service that exposes sandboxed file management, shell execution, browser automation, deployment helpers, and Manus page generation endpoints. Follow these steps to install it on a Linux VPS.
-
-## System Packages
+## System packages
 ```bash
 sudo apt update
 sudo apt install -y python3 python3-venv python3-pip git nodejs npm chromium cloudflared rsync
 sudo npm install -g pm2
 ```
 
-## Directory Layout
+## Directory layout
 ```bash
 sudo mkdir -p /srv/action-runtime/{app,fsroot,sessions,browser/context,manus-pages}
 sudo chown -R "$USER":"$USER" /srv/action-runtime
 ```
 
-## Clone the Repository
+## Clone the repository
 ```bash
 cd /srv/action-runtime/app
-
+git clone https://github.com/desconhecidozfc-hash/sunoexe
 ```
 
-## Python Environment
+## Python environment
 ```bash
 cd /srv/action-runtime/app/srvaction-runtime
 python3 -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip
-pip install -r ../requirements.txt
+pip install -r requirements.txt
 ```
 
-## Node.js Utilities
+## Node.js and deployment helpers
 ```bash
-cd /srv/action-runtime/app
+# Required only for deployment commands such as deploy_apply_deployment
 npm install
-pm2 -v
+pm2 -v  # confirm availability for process management
 ```
-Run `npm install` inside each Next.js project before invoking `deploy_apply_deployment` with `kind: nextjs`.
+Run `npm install` again inside each Next.js project when deploy_apply_deployment triggers `npm install`, `npm run build`, and `pm2 start`.
 
-## Browser Automation Data
+## Browser automation data
 ```bash
 mkdir -p /srv/action-runtime/browser/context
 ```
 
-## Start the Server
+## Start the server
 ```bash
 cd /srv/action-runtime/app/srvaction-runtime
 source .venv/bin/activate
 uvicorn app.main:app --host 0.0.0.0 --port 8000
 ```
-Managed option with PM2:
+Use PM2 for a managed process:
 ```bash
 pm2 start "uvicorn app.main:app --host 0.0.0.0 --port 8000" --name action-runtime
 pm2 save
 ```
 
-## Expose Network Ports
+## Expose network ports
 ```bash
 sudo ufw allow 8000/tcp
 ```
@@ -71,9 +68,10 @@ cd /srv/action-runtime/app
 git pull
 cd srvaction-runtime
 source .venv/bin/activate
-pip install -r ../requirements.txt
+pip install -r requirements.txt
 ```
-## Health Check
+
+## Test the API
 ```bash
 curl http://127.0.0.1:8000/health
 ```
