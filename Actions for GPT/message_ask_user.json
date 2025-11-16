@@ -1,0 +1,20 @@
+{
+  "name": "message_ask_user",
+  "description": "Prompt the user with a question and optional options.",
+  "method": "POST",
+  "endpoint": "/api/message/ask",
+  "parameters": {
+    "prompt": {
+      "type": "string",
+      "description": "Question text."
+    },
+    "options": {
+      "type": "array",
+      "description": "Optional list of response options."
+    }
+  },
+  "required_parameters": [
+    "prompt"
+  ],
+  "returns": "success flag with data.prompt echo and options array."
+}

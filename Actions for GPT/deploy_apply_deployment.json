@@ -1,0 +1,26 @@
+{
+  "name": "deploy_apply_deployment",
+  "description": "Apply a static rsync or Next.js deployment inside the VPS.",
+  "method": "POST",
+  "endpoint": "/api/deploy/apply",
+  "parameters": {
+    "project_path": {
+      "type": "string",
+      "description": "Sandboxed project directory."
+    },
+    "site_name": {
+      "type": "string",
+      "description": "Deployment identifier (alphanumeric, dash, underscore)."
+    },
+    "kind": {
+      "type": "string",
+      "description": "Deployment type: static or nextjs."
+    }
+  },
+  "required_parameters": [
+    "project_path",
+    "site_name",
+    "kind"
+  ],
+  "returns": "success flag and data.location describing the published target."
+}

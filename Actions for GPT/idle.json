@@ -1,0 +1,14 @@
+{
+  "name": "idle",
+  "description": "Report that the agent is idle while waiting for instructions.",
+  "method": "POST",
+  "endpoint": "/api/idle",
+  "parameters": {
+    "reason": {
+      "type": "string",
+      "description": "Optional explanation."
+    }
+  },
+  "required_parameters": [],
+  "returns": "success flag and data.status set to 'idle' with a reason."
+}
