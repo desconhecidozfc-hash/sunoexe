@@ -1,0 +1,20 @@
+{
+  "name": "shell_wait",
+  "description": "Wait for a shell session to complete or until a timeout.",
+  "method": "POST",
+  "endpoint": "/api/shell/wait",
+  "parameters": {
+    "id": {
+      "type": "string",
+      "description": "Session identifier."
+    },
+    "timeout": {
+      "type": "integer",
+      "description": "Seconds to wait (1-60)."
+    }
+  },
+  "required_parameters": [
+    "id"
+  ],
+  "returns": "success flag and data.output, data.running, data.returncode fields."
+}

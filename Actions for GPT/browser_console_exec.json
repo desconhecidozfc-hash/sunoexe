@@ -1,0 +1,16 @@
+{
+  "name": "browser_console_exec",
+  "description": "Evaluate a JavaScript snippet in the page context.",
+  "method": "POST",
+  "endpoint": "/api/browser/console/exec",
+  "parameters": {
+    "script": {
+      "type": "string",
+      "description": "JavaScript expression to evaluate."
+    }
+  },
+  "required_parameters": [
+    "script"
+  ],
+  "returns": "success flag and data.result with the evaluation output."
+}

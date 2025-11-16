@@ -1,0 +1,25 @@
+{
+  "name": "shell_write_to_process",
+  "description": "Send stdin text into a running shell session.",
+  "method": "POST",
+  "endpoint": "/api/shell/write",
+  "parameters": {
+    "id": {
+      "type": "string",
+      "description": "Session identifier."
+    },
+    "data": {
+      "type": "string",
+      "description": "Text to write to stdin."
+    },
+    "press_enter": {
+      "type": "boolean",
+      "description": "Append a newline after the data."
+    }
+  },
+  "required_parameters": [
+    "id",
+    "data"
+  ],
+  "returns": "success flag once the input is queued."
+}

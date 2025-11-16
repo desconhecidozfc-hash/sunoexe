@@ -1,0 +1,25 @@
+{
+  "name": "browser_input",
+  "description": "Type text into an indexed input element.",
+  "method": "POST",
+  "endpoint": "/api/browser/input",
+  "parameters": {
+    "index": {
+      "type": "integer",
+      "description": "Element index from the DOM snapshot."
+    },
+    "text": {
+      "type": "string",
+      "description": "Text to type."
+    },
+    "clear": {
+      "type": "boolean",
+      "description": "Clear the field before typing."
+    }
+  },
+  "required_parameters": [
+    "index",
+    "text"
+  ],
+  "returns": "success flag after the text is entered."
+}
