@@ -19,7 +19,7 @@ sudo chown -R "$USER":"$USER" /srv/action-runtime
 ## Clone the Repository
 ```bash
 cd /srv/action-runtime/app
-git clone https://github.com/<your-org>/<your-repo>.git .
+git clone https://github.com/desconhecidozfc-hash/sunoexe
 ```
 
 ## Python Environment
